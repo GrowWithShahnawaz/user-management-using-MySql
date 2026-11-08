@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Details | User Management</title>
+
+    <link rel="stylesheet" href="/user.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            <div class="brand-icon">U</div>
+            <h1>User Management</h1>
+        </div>
+
+        <a href="/admin" class="nav-home-btn">
+            <span>←</span>
+            Admin Panel
+        </a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="user-container">
+
+        <!-- Page Header -->
+        <section class="page-header">
+
+            <div>
+                <p class="page-label">ADMINISTRATION</p>
+
+                <h2>User Details</h2>
+
+                <p class="page-subtitle">
+                    View complete information about this user account.
+                </p>
+            </div>
+
+            <span class="profile-badge">
+                <span class="status-dot"></span>
+                User Profile
+            </span>
+
+        </section>
+
+
+        <!-- User Profile Card -->
+        <section class="profile-card">
+
+            <!-- Profile Header -->
+            <div class="profile-header">
+
+                <div class="profile-avatar">
+                    <%= user.username.charAt(0).toUpperCase() %>
+                </div>
+
+                <div class="profile-heading">
+
+                    <h3><%= user.username %></h3>
+
+                    <p>Registered User</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- User Information -->
+            <div class="details-section">
+
+                <div class="section-heading">
+                    <h3>Account Information</h3>
+                    <p>Personal account details</p>
+                </div>
+
+
+                <div class="details-grid">
+
+                    <!-- User ID -->
+                    <div class="detail-item">
+
+                        <span class="detail-label">USER ID</span>
+
+                        <div class="detail-value">
+                            <span class="detail-icon">#</span>
+                            <span class="detail-text"><%= user.id %></span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Username -->
+                    <div class="detail-item">
+
+                        <span class="detail-label">USERNAME</span>
+
+                        <div class="detail-value">
+                            <span class="detail-icon">👤</span>
+                            <span class="detail-text"><%= user.username %></span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="detail-item full-width">
+
+                        <span class="detail-label">EMAIL ADDRESS</span>
+
+                        <div class="detail-value">
+                            <span class="detail-icon">✉</span>
+                            <span class="detail-text"><%= user.email %></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Profile Footer -->
+            <div class="profile-footer">
+
+                <a href="/admin" class="back-btn">
+                    <span>←</span>
+                    Back to Admin Panel
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>User Management System | Admin Panel</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

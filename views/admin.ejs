@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel | User Management</title>
+
+    <link rel="stylesheet" href="/admin.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            <div class="brand-icon">U</div>
+            <h1>User Management</h1>
+        </div>
+
+        <a href="/" class="dashboard-btn">
+            ← Dashboard
+        </a>
+
+    </nav>
+
+
+    <main class="admin-container">
+
+        <!-- Page Header -->
+        <section class="admin-header">
+
+            <div>
+                <p class="page-label">ADMINISTRATION</p>
+
+                <h2>Admin Panel</h2>
+
+                <p class="admin-subtitle">
+                    View and manage registered user accounts.
+                </p>
+            </div>
+
+            <div class="admin-badge">
+                <span class="status-dot"></span>
+                Admin Access
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="admin-stats">
+
+            <div class="admin-stat-card">
+
+                <div class="stat-icon">👥</div>
+
+                <div>
+                    <p>Total Registered Users</p>
+                    <h3><%= users.length %></h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Manage Users -->
+        <section class="admin-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h3>Manage Users</h3>
+
+                    <p>
+                        View complete details of registered users.
+                    </p>
+                </div>
+
+                <span class="total-badge">
+                    <%= users.length %> Users
+                </span>
+
+            </div>
+
+
+            <% if (users.length > 0) { %>
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Email Address</th>
+                                <th>User ID</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <% for (let user of users) { %>
+
+                                <tr>
+
+                                    <!-- User -->
+                                    <td>
+                                        <div class="admin-user">
+
+                                            <div class="admin-avatar">
+                                                <%= user.username.charAt(0).toUpperCase() %>
+                                            </div>
+
+                                            <strong>
+                                                <%= user.username %>
+                                            </strong>
+
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Email -->
+                                    <td>
+                                        <span class="admin-email">
+                                            <%= user.email %>
+                                        </span>
+                                    </td>
+
+
+                                    <!-- User ID -->
+                                    <td>
+                                        <span class="admin-user-id">
+                                            <%= user.id %>
+                                        </span>
+                                    </td>
+
+
+                                    <!-- View Button -->
+                                    <td>
+
+                                        <a
+                                            href="/admin/user/<%= user.id %>"
+                                            class="view-btn"
+                                        >
+                                            <span>👁</span>
+                                            View User
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+                            <% } %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            <% } else { %>
+
+                <!-- Empty State -->
+                <div class="empty-state">
+
+                    <div class="empty-icon">👥</div>
+
+                    <h3>No Users Found</h3>
+
+                    <p>
+                        There are no registered users available.
+                    </p>
+
+                </div>
+
+            <% } %>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="admin-footer">
+            <p>User Management System | Admin Panel</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

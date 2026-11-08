@@ -1,0 +1,462 @@
+
+/* ==============================
+   GLOBAL RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fa;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-brand h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+
+/* Navbar Button */
+
+.nav-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-home-btn:hover {
+    background: #dbeafe;
+}
+
+.nav-home-btn span {
+    font-size: 18px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.user-container {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 45px auto;
+}
+
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.page-label {
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.page-header h2 {
+    color: #111827;
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Profile Badge */
+
+.profile-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    background: #ecfdf5;
+    color: #047857;
+
+    border: 1px solid #a7f3d0;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #10b981;
+    border-radius: 50%;
+}
+
+
+/* ==============================
+   PROFILE CARD
+============================== */
+
+.profile-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+
+/* ==============================
+   PROFILE HEADER
+============================== */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        120deg,
+        #eff6ff,
+        #ffffff
+    );
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-heading h3 {
+    color: #111827;
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.profile-heading p {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   DETAILS SECTION
+============================== */
+
+.details-section {
+    padding: 28px 30px;
+}
+
+.section-heading {
+    margin-bottom: 24px;
+}
+
+.section-heading h3 {
+    color: #111827;
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   DETAILS GRID
+============================== */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 17px;
+
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.detail-label {
+    color: #6b7280;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.detail-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 0;
+
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.detail-icon {
+    color: #2563eb;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.detail-text {
+    overflow-wrap: anywhere;
+}
+
+
+/* ==============================
+   PROFILE FOOTER
+============================== */
+
+.profile-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 20px 30px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #1d4ed8;
+}
+
+.back-btn span {
+    font-size: 17px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    margin-top: 30px;
+    padding: 20px 10px;
+
+    text-align: center;
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 12px 4%;
+    }
+
+    .nav-brand h1 {
+        font-size: 16px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .nav-home-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .user-container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .page-header {
+        align-items: flex-start;
+    }
+
+    .page-header h2 {
+        font-size: 25px;
+    }
+
+    .profile-badge {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .profile-header {
+        padding: 22px;
+    }
+
+    .profile-avatar {
+        width: 55px;
+        height: 55px;
+        font-size: 21px;
+    }
+
+    .profile-heading h3 {
+        font-size: 19px;
+    }
+
+    .details-section {
+        padding: 22px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .profile-footer {
+        padding: 18px 22px;
+    }
+
+    .back-btn {
+        width: 100%;
+    }
+
+}

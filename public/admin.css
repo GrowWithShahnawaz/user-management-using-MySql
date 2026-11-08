@@ -1,0 +1,564 @@
+
+/* ==============================
+   GLOBAL RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fa;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+
+    background: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-brand h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+
+/* Dashboard Button */
+
+.dashboard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.dashboard-btn:hover {
+    background: #dbeafe;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.admin-container {
+    width: 84%;
+    max-width: 1200px;
+
+    margin: 45px auto;
+}
+
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.page-label {
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.admin-header h2 {
+    color: #111827;
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.admin-subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   ADMIN BADGE
+============================== */
+
+.admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    background: #ecfdf5;
+    color: #047857;
+
+    border: 1px solid #a7f3d0;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #10b981;
+    border-radius: 50%;
+}
+
+
+/* ==============================
+   ADMIN STATISTICS
+============================== */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.admin-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 10px;
+    font-size: 23px;
+}
+
+.admin-stat-card p {
+    color: #6b7280;
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+.admin-stat-card h3 {
+    color: #111827;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   ADMIN CARD
+============================== */
+
+.admin-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+
+/* ==============================
+   SECTION HEADING
+============================== */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding: 22px 25px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.section-heading h3 {
+    color: #111827;
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+
+/* Total Users Badge */
+
+.total-badge {
+    padding: 8px 12px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   TABLE
+============================== */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th {
+    padding: 16px 20px;
+
+    background: #f9fafb;
+    color: #6b7280;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 17px 20px;
+
+    border-bottom: 1px solid #f1f3f5;
+
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.admin-table tbody tr {
+    transition: background 0.2s;
+}
+
+.admin-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==============================
+   ADMIN USER
+============================== */
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    white-space: nowrap;
+}
+
+.admin-user strong {
+    color: #374151;
+    font-size: 13px;
+}
+
+
+/* User Avatar */
+
+.admin-avatar {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   EMAIL
+============================== */
+
+.admin-email {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   USER ID
+============================== */
+
+.admin-user-id {
+    color: #6b7280;
+
+    font-family: monospace;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   VIEW USER BUTTON
+============================== */
+
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.view-btn:hover {
+    background: #2563eb;
+    color: #ffffff;
+
+    border-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.view-btn span {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   EMPTY STATE
+============================== */
+
+.empty-state {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    color: #111827;
+    font-size: 19px;
+
+    margin-bottom: 9px;
+}
+
+.empty-state p {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.admin-footer {
+    margin-top: 30px;
+    padding: 20px 10px;
+
+    text-align: center;
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 900px) {
+
+    .admin-container {
+        width: 92%;
+    }
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .admin-table {
+        min-width: 750px;
+    }
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 12px 4%;
+    }
+
+    .nav-brand h1 {
+        font-size: 16px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .dashboard-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .admin-container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .admin-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .admin-header h2 {
+        font-size: 25px;
+    }
+
+    .admin-badge {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        padding: 18px;
+    }
+
+    .section-heading h3 {
+        font-size: 15px;
+    }
+
+}

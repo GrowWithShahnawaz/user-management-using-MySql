@@ -1,0 +1,549 @@
+
+/* ==============================
+   GLOBAL RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fa;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+    background: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-brand h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.nav-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-home-btn:hover {
+    background: #dbeafe;
+}
+
+.nav-home-btn span {
+    font-size: 18px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.users-container {
+    width: 84%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.users-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.page-label {
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.users-header h2 {
+    font-size: 30px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.users-subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   USER COUNT
+============================== */
+
+.user-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    min-width: 110px;
+    padding: 16px 22px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.user-count span {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-count strong {
+    color: #2563eb;
+    font-size: 25px;
+}
+
+
+/* ==============================
+   TABLE CARD
+============================== */
+
+.table-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.table-heading {
+    padding: 22px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table-heading h3 {
+    color: #111827;
+    font-size: 17px;
+}
+
+.table-description {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   TABLE
+============================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.users-table th {
+    padding: 16px 20px;
+
+    background: #f9fafb;
+    color: #6b7280;
+
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    white-space: nowrap;
+}
+
+.users-table td {
+    padding: 17px 20px;
+    border-bottom: 1px solid #f1f3f5;
+
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.users-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.users-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==============================
+   USER ID
+============================== */
+
+.user-id {
+    color: #6b7280;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   USER NAME & AVATAR
+============================== */
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    white-space: nowrap;
+}
+
+.user-name strong {
+    color: #374151;
+    font-size: 13px;
+}
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   EMAIL
+============================== */
+
+.user-email {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   ACTION BUTTONS
+============================== */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+
+/* EDIT BUTTON */
+
+.edit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 9px 12px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.edit-btn:hover {
+    background: #dbeafe;
+}
+
+.edit-btn span {
+    font-size: 15px;
+}
+
+
+/* DELETE FORM */
+
+.delete-form {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+/* PASSWORD INPUT */
+
+.delete-password {
+    width: 135px;
+    padding: 9px 10px;
+
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    color: #374151;
+    font-size: 12px;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+.delete-password::placeholder {
+    color: #9ca3af;
+}
+
+.delete-password:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.08);
+}
+
+
+/* DELETE BUTTON */
+
+.delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 9px 12px;
+
+    background: #fef2f2;
+    color: #dc2626;
+
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+
+.delete-btn span {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   EMPTY STATE
+============================== */
+
+.empty-state {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    color: #111827;
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+.empty-state p {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.back-dashboard-btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.back-dashboard-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    margin-top: 30px;
+    padding: 20px 10px;
+
+    text-align: center;
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 900px) {
+
+    .users-container {
+        width: 92%;
+    }
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .users-table {
+        min-width: 900px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 12px 4%;
+    }
+
+    .nav-brand h1 {
+        font-size: 16px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .nav-home-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .users-container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .users-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .users-header h2 {
+        font-size: 25px;
+    }
+
+    .user-count {
+        min-width: 85px;
+        padding: 12px;
+    }
+
+    .user-count strong {
+        font-size: 21px;
+    }
+
+    .table-heading {
+        padding: 18px;
+    }
+
+}

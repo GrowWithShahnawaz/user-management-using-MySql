@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit User | User Management</title>
+
+    <link rel="stylesheet" href="/edit.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            <div class="brand-icon">U</div>
+            <h1>User Management</h1>
+        </div>
+
+        <a href="/user" class="nav-home-btn">
+            <span>←</span>
+            All Users
+        </a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="edit-container">
+
+        <!-- Page Heading -->
+        <section class="page-header">
+
+            <p class="page-label">USER MANAGEMENT</p>
+
+            <h2>Edit User Details</h2>
+
+            <p class="page-subtitle">
+                Update the username associated with this account.
+            </p>
+
+        </section>
+
+
+        <!-- Edit Card -->
+        <section class="edit-card">
+
+            <div class="card-heading">
+
+                <div class="edit-icon">✎</div>
+
+                <div>
+                    <h3>Edit User Information</h3>
+                    <p>Make changes to your account details.</p>
+                </div>
+
+            </div>
+
+
+            <!-- User Information -->
+            <div class="user-info">
+
+                <span class="info-label">USER EMAIL ADDRESS</span>
+
+                <div class="email-box">
+                    <span class="email-icon">✉</span>
+                    <strong><%= user.email %></strong>
+                </div>
+
+                <span class="info-note">
+                    Your email address cannot be changed here.
+                </span>
+
+            </div>
+
+
+            <!-- Edit Form -->
+            <form
+                action="/user/<%= user.id %>?_method=PATCH"
+                method="POST"
+                class="edit-form"
+            >
+
+                <div class="form-group">
+
+                    <label for="username">New Username</label>
+
+                    <textarea
+                        name="username"
+                        id="username"
+                        rows="2"
+                        placeholder="Enter your new username"
+                        required
+                        minlength="3"
+                    ><%= user.username %></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">Confirm Your Password</label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Enter your current password"
+                        required
+                    >
+
+                    <span class="input-note">
+                        Password is required to confirm this change.
+                    </span>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <a href="/user" class="cancel-btn">
+                        Cancel
+                    </a>
+
+                    <button type="submit" class="update-btn">
+                        <span>✓</span>
+                        Update Username
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>User Management System | Built with Node.js & MySQL</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

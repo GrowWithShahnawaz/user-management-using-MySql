@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | User Management</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            <div class="brand-icon">U</div>
+            <h1>User Management</h1>
+        </div>
+
+        <a href="/admin" class="nav-label">
+            Admin Panel
+        </a>
+
+    </nav>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div>
+                <p class="page-label">OVERVIEW</p>
+
+                <h2>Dashboard</h2>
+
+                <p class="welcome-text">
+                    Welcome to your user management dashboard.
+                </p>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+
+            <div class="stats-card">
+
+                <div class="stats-top">
+
+                    <div class="stats-icon">
+                        <span>👥</span>
+                    </div>
+
+                    <span class="stats-label">TOTAL USERS</span>
+
+                </div>
+
+                <h3 class="stats-number"><%= count %></h3>
+
+                <p class="stats-description">
+                    Total registered users in your database.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="actions-section">
+
+            <h3>Quick Actions</h3>
+
+            <!-- View Users -->
+            <div class="action-card">
+
+                <div class="action-content">
+                    <h4>Manage Users</h4>
+
+                    <p>
+                        View all registered users and manage their information.
+                    </p>
+                </div>
+
+                <a href="/user" class="primary-btn">
+                    View All Users
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <!-- Join Us -->
+            <div class="action-card join-card">
+
+                <div class="action-content">
+                    <h4>Join Our Platform</h4>
+
+                    <p>
+                        Create a new account and become a part of our platform.
+                    </p>
+                </div>
+
+                <a href="/user/join" class="join-btn">
+                    Join Us
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>User Management System | Built with Node.js & MySQL</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

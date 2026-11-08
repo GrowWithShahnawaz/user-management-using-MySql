@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join Us | User Management</title>
+
+    <link rel="stylesheet" href="/join.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            <div class="brand-icon">U</div>
+            <h1>User Management</h1>
+        </div>
+
+        <a href="/" class="nav-home-btn">
+            <span>←</span>
+            Dashboard
+        </a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="join-container">
+
+        <!-- Page Header -->
+        <section class="page-header">
+
+            <p class="page-label">GET STARTED</p>
+
+            <h2>Join Our Platform</h2>
+
+            <p class="page-subtitle">
+                Create your account by filling in the details below.
+            </p>
+
+        </section>
+
+
+        <!-- Registration Card -->
+        <section class="join-card">
+
+            <!-- Card Heading -->
+            <div class="card-heading">
+
+                <div class="join-icon">✚</div>
+
+                <div>
+                    <h3>Create Your Account</h3>
+                    <p>Enter your information to register.</p>
+                </div>
+
+            </div>
+
+
+            <!-- Registration Form -->
+            <form action="/user" method="POST" class="join-form">
+
+                <!-- Username -->
+                <div class="form-group">
+
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Enter your username"
+                        required
+                        minlength="3"
+                        maxlength="50"
+                        autocomplete="username"
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your email address"
+                        required
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Create a password"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                    >
+
+                    <span class="input-note">
+                        Password must contain at least 8 characters.
+                    </span>
+
+                </div>
+
+
+                <!-- Form Buttons -->
+                <div class="form-actions">
+
+                    <a href="/" class="cancel-btn">
+                        Cancel
+                    </a>
+
+                    <button type="submit" class="submit-btn">
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>User Management System | Built with Node.js & MySQL</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
